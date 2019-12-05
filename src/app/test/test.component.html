@@ -1,0 +1,27 @@
+<div *ngIf="showedit">
+  <h3>Product</h3>
+  <h4>Company</h4>
+  Product<div>
+  <input type="text" name="txtName" [{ngModel}]="pname"></div>
+  Company<div>
+  <input type="text" name="txtCompany" [{ngModel}]="newc"></div>
+  Price<div>
+    <input type="text" name="txtPrice" [{ngModel}]="pprice">
+  </div>
+</div>
+<input type="button" value="Get Data From server" (click)="connect()">
+{{message.products}}
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Company</td>
+    <td>Price</td>
+  </tr>
+  <tr *ngFor="let p of products">
+      <td>{{p.name}}</td>
+      <td>{{p.company}}</td>
+      <td>{{p.price}}</td>
+      <td><input type="button" value="Delete" (click)="Delete(p.name)"></td>
+      <td><input type="button" value="Edit" (click)="Edit()"></td>
+  </tr>
+</table>

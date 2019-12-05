@@ -1,0 +1,31 @@
+<table>
+  <tr>
+    <td>Product</td>
+    <td>Price</td>
+  </tr>
+  <tr *ngFor="let p of products;let i=index">
+    <td>{{p.Title}}</td>
+    <td>{{p.Price}}</td>
+    <td><input type="button" value="Add To Cart" (click)="AddtoCart(p)"></td>
+  </tr>
+</table>
+<hr>
+
+<table>
+  <tr><th>Add to Cart</th></tr>
+  <tr>
+    <td>Product</td>
+    <td>Price</td>
+    <td></td>
+  </tr>
+  <tr *ngFor="let p of cart;let i=index">
+    <td>{{p.Title}}</td>
+    <td>{{p.Price}}</td>
+    <td><input type="button" value="Remove From Cart" (click)="RemoveCart(p,i)"></td>
+  </tr>
+  <tr><td>Total:</td>
+  <td>{{total}}</td></tr>
+</table>
+
+
+

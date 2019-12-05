@@ -1,0 +1,20 @@
+
+
+<form action="">
+  <div>
+    Name
+    <input type="text" name="txtname" [(ngModel)]="name">
+  </div>
+  <div>
+    Company
+    <input type="text" name="txtcompany" [(ngModel)]="company">
+  </div>
+  <div>
+    Price
+    <input type="text" name="txtprice" [(ngModel)]="price">
+  </div>
+  <div>
+    <button type="button" value="Add product" (click)="AddProduct()">Add</button>
+  </div>
+  <h3>{{messsage.msg}}</h3>
+</form>
